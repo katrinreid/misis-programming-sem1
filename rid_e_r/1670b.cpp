@@ -15,7 +15,7 @@ int main() {
     while (t--) {
         answer = 0;
         std::cin >> n;
-        std::cin >> *(s+1);
+        std::cin >> (s+1);
         std::cin >> k;
         memset(f, 0, sizeof f);
         for (int i=1; i<=k ; i+=1) {

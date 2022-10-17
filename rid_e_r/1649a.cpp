@@ -7,15 +7,36 @@ int main() {
         int n=2;
         std::cin>>n;
         int answer=0;
-        int b=5;
+        int s[n];
         for (int j=0; j<n; j+=1) {
             int a;
             std::cin>>a;
-            if (b==0 or a==0) {
-                answer += 1;
-            }
-            b = a;
+            s[j] = a;
         }
-        std::cout<<answer<<std::endl;
+        int first=0;
+        int last=n-1;
+        for (int j=1; j<n; j+=1) {
+            if (s[j] == 1) {
+                first = j;
+            }
+            else {
+                break;
+            }
+        }
+        for (int j=(n-2); j>=0; j-=1) {
+            if (s[j] == 1) {
+                last = j;
+            }
+            else {
+                break;
+            }
+        }
+        if (last <= first) {
+            std::cout<<0<<std::endl;
+        }
+        else {
+            answer = last-first;
+            std::cout<<answer<<std::endl;
+        }
     }
 }

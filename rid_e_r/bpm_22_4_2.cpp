@@ -4,7 +4,7 @@
 int main() {
     double x = 0, y = 0;
     int yes = 0, no = 0;
-    for (int i=0; i<10000; i+=1) {
+    while(std::cin) {
         std::cin >> x >> y;
         double len = std::pow(std::pow(x, 2) + std::pow(y, 2), 0.5);
         if (len <= 1) {
